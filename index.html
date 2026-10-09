@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="kk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SheberQol — мүмкіндігі шектеулі жандар мен барлық қолөнершілер өз бұйымдарын ұсына алатын қазақша сауда алаңы.">
+  <title>SheberQol — шеберлер алаңы</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Негізгі мазмұнға өту</a>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="SheberQol басты беті">
+      <span class="brand-mark" aria-hidden="true">S<span>Q</span></span>
+      <span class="brand-name">Sheber<span>Qol</span><small>Шеберлікке жол ашамыз</small></span>
+    </a>
+    <nav class="main-nav" aria-label="Негізгі мәзір">
+      <a href="#products">Бұйымдар</a>
+      <a href="#sell">Бұйым сату</a>
+      <a href="#about">Біз туралы</a>
+    </nav>
+    <div class="header-actions">
+      <button class="small-btn" id="contrastBtn" type="button" aria-pressed="false">Контраст</button>
+      <button class="small-btn cart-open" id="cartOpenBtn" type="button">Себет <span id="cartCount">0</span></button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> Қазақ қолөнері · Баршаға ортақ алаң</p>
+        <h1>Қолыңнан шыққан дүние — <em>құнды дүние.</em></h1>
+        <p class="hero-text">SheberQol — мүмкіндігі шектеулі жандар мен барлық қолөнершілер өз қолымен жасаған бұйымдарын таныстырып, сатуға ұсына алатын онлайн алаң.</p>
+        <div class="hero-actions">
+          <a class="button button-dark" href="#products">Бұйымдарды көру <span aria-hidden="true">↗</span></a>
+          <a class="button button-light" href="#sell">Өз бұйымымды сатамын</a>
+        </div>
+        <div class="hero-note"><span class="note-icon" aria-hidden="true">✳</span><span><strong>Әр шеберге мүмкіндік</strong><br>Өнеріңді көрсет, еңбегіңді бағалат.</span></div>
+      </div>
+      <div class="hero-art">
+        <img class="hero-photo" src="https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=1000&q=85" alt="Қолдан жасалған керамикалық бұйымдар">
+        <div class="hero-stamp">ӨЗ ҚОЛЫҢМЕН<br><span>ЖАСАЛҒАН</span></div>
+        <div class="hero-caption"><span>SheberQol таңдауы</span><span>Еңбекке құрметпен</span></div>
+      </div>
+    </section>
+
+    <section class="values" aria-label="SheberQol құндылықтары">
+      <div><span class="value-icon">♡</span><p><strong>Қолдау</strong><small>Шеберлердің еңбегін бағалаймыз</small></p></div>
+      <div><span class="value-icon">✳</span><p><strong>Қолжетімділік</strong><small>Қарапайым әрі түсінікті қолдану</small></p></div>
+      <div><span class="value-icon">✦</span><p><strong>Ұлттық мұра</strong><small>Қазақ қолөнерін бірге дамытамыз</small></p></div>
+    </section>
+
+    <section class="products-section" id="products">
+      <div class="section-heading">
+        <div><p class="eyebrow">Шеберлер ұсынған</p><h2>Ерекше бұйымдар <em>топтамасы.</em></h2><p class="section-desc">Ұнаған бұйымды таңдаңыз немесе санат бойынша іздеңіз.</p></div>
+        <label class="search-box"><span aria-hidden="true">⌕</span><input id="searchInput" type="search" placeholder="Бұйым іздеу..." aria-label="Бұйым атауы бойынша іздеу"></label>
+      </div>
+      <div class="category-strip" aria-label="Бұйым санаттары">
+        <button class="category-chip active" data-category="Барлығы" type="button">Барлығы</button>
+        <button class="category-chip" data-category="Киіз" type="button">Киіз</button>
+        <button class="category-chip" data-category="Керамика" type="button">Керамика</button>
+        <button class="category-chip" data-category="Ағаш" type="button">Ағаш</button>
+        <button class="category-chip" data-category="Былғары" type="button">Былғары</button>
+        <button class="category-chip" data-category="Зергерлік" type="button">Зергерлік бұйымдар</button>
+      </div>
+      <div class="product-grid" id="productGrid">
+        <article class="product-card" data-category="Киіз" data-name="Киіз сөмке" data-price="12500">
+          <div class="product-image"><img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=800&q=80" alt="Қолдан жасалған сөмке" loading="lazy"><span class="product-tag">Қол жұмысы</span><button class="heart-btn" aria-label="Таңдаулыларға қосу" type="button">♡</button></div>
+          <div class="product-info"><p class="product-category">КИІЗ БҰЙЫМДАРЫ</p><h3>Киіз сөмке</h3><p class="maker">Шебер: Айдана</p><div class="product-bottom"><span class="price">12 500 ₸</span><button class="add-btn" type="button" aria-label="Киіз сөмкені себетке қосу">Себетке +</button></div></div>
+        </article>
+        <article class="product-card" data-category="Керамика" data-name="Қолдан жасалған керамика" data-price="8900">
+          <div class="product-image"><img src="https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=800&q=80" alt="Қолдан жасалған керамикалық ыдыс" loading="lazy"><span class="product-tag">Бірегей бұйым</span><button class="heart-btn" aria-label="Таңдаулыларға қосу" type="button">♡</button></div>
+          <div class="product-info"><p class="product-category">КЕРАМИКА</p><h3>Керамикалық ыдыс</h3><p class="maker">Шебер: Нұржан</p><div class="product-bottom"><span class="price">8 900 ₸</span><button class="add-btn" type="button" aria-label="Керамикалық ыдысты себетке қосу">Себетке +</button></div></div>
+        </article>
+        <article class="product-card" data-category="Ағаш" data-name="Ағаш тостаған" data-price="6500">
+          <div class="product-image"><img src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&fit=crop&w=800&q=80" alt="Ағаштан жасалған қолөнер бұйымы" loading="lazy"><span class="product-tag">Табиғи материал</span><button class="heart-btn" aria-label="Таңдаулыларға қосу" type="button">♡</button></div>
+          <div class="product-info"><p class="product-category">АҒАШ БҰЙЫМДАРЫ</p><h3>Ағаш тостаған</h3><p class="maker">Шебер: Ерлан</p><div class="product-bottom"><span class="price">6 500 ₸</span><button class="add-btn" type="button" aria-label="Ағаш тостағанды себетке қосу">Себетке +</button></div></div>
+        </article>
+        <article class="product-card" data-category="Былғары" data-name="Былғары әмиян" data-price="10000">
+          <div class="product-image"><img src="https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&w=800&q=80" alt="Былғарыдан жасалған әмиян" loading="lazy"><span class="product-tag">Шебер таңдауы</span><button class="heart-btn" aria-label="Таңдаулыларға қосу" type="button">♡</button></div>
+          <div class="product-info"><p class="product-category">БЫЛҒАРЫ БҰЙЫМДАРЫ</p><h3>Былғары әмиян</h3><p class="maker">Шебер: Марат</p><div class="product-bottom"><span class="price">10 000 ₸</span><button class="add-btn" type="button" aria-label="Былғары әмиянды себетке қосу">Себетке +</button></div></div>
+        </article>
+      </div>
+      <p class="empty-state" id="emptyState" hidden>Бұл сұранысқа сай бұйым табылмады. Басқа сөзбен іздеп көріңіз.</p>
+      <p class="cart-message" id="cartMessage" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="sell-section" id="sell">
+      <div class="sell-intro">
+        <p class="eyebrow">Өз ісіңді баста</p>
+        <h2>Өз бұйымыңды <em>сатқың келе ме?</em></h2>
+        <p>Қолөнер туындыңызды осы жерге таныстырыңыз. Мәліметтерді толтырыңыз — енгізген бұйым осы демо-бетте бірден көрсетіледі.</p>
+        <div class="sell-promise"><span>✓</span> Мүмкіндігі шектеулі жандардың кәсіп бастауына қолдау</div>
+        <div class="sell-promise"><span>✓</span> Қолдан жасалған бұйымдарға арналған орта</div>
+      </div>
+      <form class="sell-form" id="sellForm">
+        <h3>Бұйымды жариялау</h3>
+        <p class="form-hint">Жұлдызшамен (*) белгіленген жолдарды толтырыңыз.</p>
+        <label>Шебердің аты-жөні *<input name="maker" required maxlength="70" placeholder="Мысалы, Айдана"></label>
+        <label>Бұйым атауы *<input name="product" required maxlength="80" placeholder="Мысалы, киізден жасалған сөмке"></label>
+        <div class="form-row">
+          <label>Санаты *
+            <select name="category" required>
+              <option value="">Санатты таңдаңыз</option><option>Киіз</option><option>Керамика</option><option>Ағаш</option><option>Былғары</option><option>Зергерлік</option><option>Басқа</option>
+            </select>
+          </label>
+          <label>Бағасы (₸) *<input name="price" type="number" min="0" step="1" required placeholder="5000"></label>
+        </div>
+        <label>Бұйымның суретіне сілтеме<input name="image" type="url" placeholder="https://..."></label>
+        <label>Бұйым туралы қысқаша мәлімет<textarea name="description" rows="3" maxlength="300" placeholder="Материалы, өлшемі, ерекшелігі..."></textarea></label>
+        <button class="button button-dark submit-btn" type="submit">Бұйымды жариялау <span>↗</span></button>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        <p class="form-note">Бұл — таныстыруға арналған үлгі. Жарияланған бұйым тек осы браузердегі бетке қосылады; сайт жабылғанда сақталмауы мүмкін.</p>
+      </form>
+    </section>
+
+    <section class="about-section" id="about">
+      <div class="about-icon" aria-hidden="true">S/Q</div>
+      <div><p class="eyebrow">Біздің мақсатымыз</p><h2>Әр шебердің еңбегі <em>құнды.</em></h2><p>SheberQol ұлттық қолөнерді насихаттап, мүмкіндігі шектеулі жандар мен басқа да шеберлерге өз өнімдерін таныстыруға мүмкіндік беретін орта болуды көздейді.</p></div>
+    </section>
+  </main>
+
+    <section class="qr-section" id="qr-code">
+      <div class="qr-copy">
+        <p class="eyebrow">SheberQol-ға оңай өтіңіз</p>
+        <h2>Сайтты QR-кодпен <em>ашыңыз.</em></h2>
+        <p>Телефоныңыздың камерасын QR-кодқа бағыттап, SheberQol сайтына кіріңіз.</p>
+        <a class="button button-dark" href="https://i6963515-dev.github.io/SQ-A126/" target="_blank" rel="noopener">Сайтты ашу <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="qr-card">
+        <img src="sheberqol-qr.png" alt="SheberQol сайтына апаратын QR-код" width="240" height="240" loading="lazy">
+        <p>https://i6963515-dev.github.io/SQ-A126/</p>
+      </div>
+    </section>
+
+  <footer class="site-footer"><a class="footer-brand" href="#home">SheberQol</a><span>© 2026 SheberQol. Қолөнерге құрметпен.</span><a href="#home">Жоғарыға ↑</a></footer>
+  <script src="script.js"></script>
+</body>
+</html>
