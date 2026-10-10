@@ -8,6 +8,42 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+
+function kazakhSpeak(text) {
+  const speech = new SpeechSynthesisUtterance(text);
+  speech.lang = "kk-KZ";
+  speech.rate = 0.85;
+  speech.pitch = 1;
+
+  window.speechSynthesis.cancel();
+  window.speechSynthesis.speak(speech);
+}
+
+// Батырмаларды басқанда жазуын дыбыстау
+document.querySelectorAll("button").forEach(button => {
+  button.addEventListener("click", () => {
+    kazakhSpeak(button.innerText.trim());
+  });
+});
+
+// Суреттерді басқанда атауын дыбыстау
+document.querySelectorAll("img").forEach(img => {
+  img.style.cursor = "pointer";
+
+  img.addEventListener("click", () => {
+    const name =
+      img.dataset.name ||
+      img.alt ||
+      img.title;
+
+    if (name) {
+      kazakhSpeak("Бұл " + name);
+    }
+  });
+});
+
+  
   <a class="skip-link" href="#main">Негізгі мазмұнға өту</a>
   <header class="site-header">
     <a class="brand" href="#home" aria-label="SheberQol басты беті">
