@@ -182,3 +182,37 @@ sellForm.addEventListener('submit', event => {
   sellForm.reset();
   document.getElementById('products').scrollIntoView({ behavior: 'smooth' });
 });
+
+
+function kazakhSpeak(text) {
+  const speech = new SpeechSynthesisUtterance(text);
+  speech.lang = "kk-KZ";
+  speech.rate = 0.85;
+  speech.pitch = 1;
+
+  window.speechSynthesis.cancel();
+  window.speechSynthesis.speak(speech);
+}
+
+// Батырмаларды басқанда жазуын дыбыстау
+document.querySelectorAll("button").forEach(button => {
+  button.addEventListener("click", () => {
+    kazakhSpeak(button.innerText.trim());
+  });
+});
+
+// Суреттерді басқанда атауын дыбыстау
+document.querySelectorAll("img").forEach(img => {
+  img.style.cursor = "pointer";
+
+  img.addEventListener("click", () => {
+    const name =
+      img.dataset.name ||
+      img.alt ||
+      img.title;
+
+    if (name) {
+      kazakhSpeak("Бұл " + name);
+    }
+  });
+});
