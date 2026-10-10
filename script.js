@@ -344,10 +344,10 @@ function initializeMarketplace() {
   // 10. ЖАҢА БҰЙЫМ ЖАРИЯЛАУ
   // ========================================
 
-  if (sellForm) {
-    sellForm.addEventListener("submit", event => {
-      event.preventDefault();
-
+if (sellForm) {
+  sellForm.addEventListener("submit", async event => {
+    event.preventDefault();
+    
       const data = new FormData(sellForm);
 
       const maker =
@@ -366,6 +366,28 @@ function initializeMarketplace() {
 
       const imageUrl =
         String(data.get("image") || "").trim();
+
+    // Жүктелген фотосуретті немесе бұрынғы сурет сілтемесін пайдалану
+const imageFile = data.get("imageFile");
+let uploadedImage = imageUrl;
+
+if (imageFile instanceof File && imageFile.size > 0) {
+  if (!imageFile.type.startsWith("image/")) {
+    if (formStatus) {
+      formStatus.textContent = "Сурет файлын таңдаңыз.";
+    }
+    return;
+  }
+
+  try {
+    uploadedImage = await readImageFile(imageFile);
+  } catch (error) {
+    if (formStatus) {
+      formStatus.textContent = "Фотосуретті оқу мүмкін болмады.";
+    }
+    return;
+  }
+}
 
       const description =
         String(data.get("description") || "").trim();
@@ -417,7 +439,7 @@ function initializeMarketplace() {
       const fallbackImage =
         "https://images.unsplash.com/photo-1452860606245-08befc0ff44b?auto=format&fit=crop&w=800&q=80";
 
-      img.src = imageUrl || fallbackImage;
+    img.src = uploadedImage || fallbackImage;
 
       img.addEventListener(
         "error",
